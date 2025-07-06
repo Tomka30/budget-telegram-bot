@@ -5,7 +5,7 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 
 RUN pip install --upgrade pip \
-    && pip install --no-binary :all: --only-binary pandas -r requirements.txt
+ && pip install --no-cache-dir --only-binary :all: -r requirements.txt
 
 COPY . .
 
